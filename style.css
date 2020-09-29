@@ -75,6 +75,7 @@ button {
 
 button:hover {
   background-color:rgb(255, 144, 144);
+  color: white;
 
 }
 .empty {
