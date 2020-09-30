@@ -2,7 +2,7 @@ var hist = "";
 var output = "";
 
 function getHist() {
-  return (hist = document.getElementById("history-value").innerText);
+  return hist = document.getElementById("history-value").innerText;
 }
 
 function printHist() {
@@ -10,7 +10,7 @@ function printHist() {
 }
 
 function getOutput() {
-  return (output = document.getElementById("output-value").innerText);
+  return output = document.getElementById("output-value").innerText;
 }
 
 function printOutput() {
@@ -33,7 +33,6 @@ function getFormatted(val) {
 }
 
 function evaluate() {
-  console.log("evaluating", hist);
   return new Function("return " + hist)();
 }
 
@@ -59,8 +58,6 @@ for (var i = 0; i < operators.length; i++) {
       output = getOutput();
       hist = getHist();
 
-      console.log(hist + " ----  " + output);
-
       if (output == "" && hist == "" && this.id == "-") {
         printHist("0-");
       }
@@ -82,7 +79,6 @@ for (var i = 0; i < operators.length; i++) {
           printHist();
         } else {
           hist += this.id;
-          console.log(this.id, hist);
           printHist();
           output = "";
           printOutput();
